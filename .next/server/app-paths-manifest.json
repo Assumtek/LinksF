@@ -1,0 +1,15 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/adm/[id]/page": "app/adm/[id]/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/adm/page": "app/adm/page.js",
+  "/formCard/[id]/page": "app/formCard/[id]/page.js",
+  "/empresa/[id]/page": "app/empresa/[id]/page.js",
+  "/formCard/page": "app/formCard/page.js",
+  "/formDescricao/[id]/page": "app/formDescricao/[id]/page.js",
+  "/formLink/[id]/page": "app/formLink/[id]/page.js",
+  "/formDescricao/page": "app/formDescricao/page.js",
+  "/formEmpresa/page": "app/formEmpresa/page.js",
+  "/page": "app/page.js",
+  "/formLink/page": "app/formLink/page.js"
+}

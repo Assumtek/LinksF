@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+
+.divisor{
+    width: 100%;
+    height: 1px;
+    margin-top: 60px;
+
+    background-color: #00000059;
+}
+
+.bio{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 70px 0px 40px 0px;
+}
+
+.bio img{
+    width: 91px;
+    height: 91px;
+    border-radius: 5px;
+}
+
+.bio h1{
+    font-size: 35px;
+}
+
+.bio p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.biolinks{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bioDescption{
+    font-size: 17px;
+    margin-bottom: 40px;
+    color: #484848;
+}
+
+.biolinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.biolinks div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 17px;
+}
+
+.biolinks div img{
+    width: 20px;
+}
+
+.biolinks div{
+    display: flex;
+    align-items: start;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 19px;
+
+    height: 55px;
+
+    border: solid 1.3px #0000004d;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.biolinks div:hover{
+    background-color: #00000017;
+    animation: 4s;
+}
+
+.cards{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.card{
+    display: flex;
+    padding: 30px 30px;
+    border: solid 1.3px #0000004d;
+    border-radius: 5px;
+    height: 160px;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.cardActions{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0px;
+}
+
+.card:hover{
+    background-color: #00000017;
+    animation: 4s;
+}
+
+.card img{
+    width: 110px;
+}
+
+.carttext h2{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.carttext p{
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #0000009d;
+}
+
+.forward{
+    background-color: #073385;
+    color: #FFFF;
+}
+
+.forward p{
+    color: #ffffff8e;
+}
+
+.forward:hover{
+    background-color: #0b52d4;
+    animation: 4s;
+}
+
+@media (max-width: 665px){
+    
+
+    .card{
+        height: 100%;
+        align-items: center;
+    }
+
+    .card img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .carttext h2{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    
+    .carttext p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
