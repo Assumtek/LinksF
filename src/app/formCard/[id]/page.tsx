@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IdEmpresaComponent } from "@/app/components/IdEmpresaComponent";
+import { useRouter } from "next/navigation";
+import { handleEmpresa } from "@/app/actions/serverActions";
+
 
 export default function FormCard() {
   const IdEmpresa = decodeURIComponent(IdEmpresaComponent() as string).trim();
@@ -14,6 +17,29 @@ export default function FormCard() {
   const [imagem, setImagem] = useState<File | null>(null);
   const [order, setOrder] = useState<number>(1);
 
+  // Informações do user logado
+    const [empresa, setEmpresa] = useState<any>(null);
+
+  const router = useRouter();
+
+  // USEEFFECTS
+    // Pega as informações do empresa fornecida na URL logado
+    useEffect(() => {
+      async function getEmpresa() {
+        try {
+          const empresa = await handleEmpresa(IdEmpresa);
+          setEmpresa(empresa.empresa);
+        } catch (error) {
+          console.error("Erro ao carregar o empresa:", error);
+        } finally {
+          // setIsLoading(false); // Após a verificação, remover o loading
+        }
+      }
+  
+      getEmpresa();
+    }, []);
+  
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -23,7 +49,7 @@ export default function FormCard() {
     }
 
     const formData = new FormData();
-    formData.append("companyId", IdEmpresa);
+    formData.append("companyId", empresa.id);
     formData.append("title", titulo);
     formData.append("description", descricao);
     formData.append("url", link);
@@ -39,14 +65,16 @@ export default function FormCard() {
       if (!response.ok) {
         throw new Error("Erro ao enviar o link");
       }
-
-      alert("Link criado com sucesso!");
       // Se quiser resetar os campos:
       setLink("");
       setTitulo("");
       setDescricao("");
       setImagem(null);
       setOrder(1);
+
+      // Redirecionar para a página /adm/${IdEmpresa}
+      router.push(`/adm/${IdEmpresa}`);
+      
     } catch (error) {
       console.error(error);
       alert("Erro ao criar o link.");

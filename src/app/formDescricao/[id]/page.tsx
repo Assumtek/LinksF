@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import { IdEmpresaComponent } from "@/app/components/IdEmpresaComponent";
 import { useEffect, useState } from "react";
 import { handleEditDescriptionEmpresa, handleEmpresa } from "@/app/actions/serverActions";
-
+import { useRouter } from "next/navigation";
 
 
 export default function FormDescricao() {
@@ -17,6 +17,8 @@ export default function FormDescricao() {
   const [empresa, setEmpresa] = useState<any>(null);
   const [inputValue, setInputValue] = useState<any>("");
 
+  const router = useRouter();
+
   console.log(IdEmpresa);
 
   // USEEFFECTS
@@ -26,6 +28,8 @@ export default function FormDescricao() {
       try {
         const empresa = await handleEmpresa(IdEmpresa);
         setEmpresa(empresa.empresa);
+
+        console.log("Informações da empresa", empresa.empresa)
       } catch (error) {
         console.error("Erro ao carregar o empresa:", error);
       } finally {
@@ -46,8 +50,10 @@ export default function FormDescricao() {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
-      await handleEditDescriptionEmpresa(IdEmpresa, inputValue);
-      alert('Descrição atualizada com sucesso!');
+      const idDaEmpresa = empresa.id
+      await handleEditDescriptionEmpresa(idDaEmpresa, inputValue);
+      // Redirecionar para a página /adm/${IdEmpresa}
+      router.push(`/adm/${IdEmpresa}`);
     } catch (error) {
       alert('Erro ao atualizar a descrição.');
     }

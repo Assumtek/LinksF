@@ -7,6 +7,8 @@ import { IdEmpresaComponent } from "@/app/components/IdEmpresaComponent";
 import { useEffect, useState } from "react";
 import { handleEditLinksEmpresa, handleEmpresa } from "@/app/actions/serverActions";
 
+import { useRouter } from "next/navigation";
+
 export default function FormLink() {
   const IdEmpresa = decodeURIComponent(IdEmpresaComponent() as string).trim();
 
@@ -16,6 +18,8 @@ export default function FormLink() {
   const [instagram, setInstagram] = useState<string>("");
 
   console.log(IdEmpresa);
+
+  const router = useRouter();
 
   // Informações do user logado
   const [empresa, setEmpresa] = useState<any>(null);
@@ -51,13 +55,15 @@ export default function FormLink() {
     event.preventDefault();
     try {
       await handleEditLinksEmpresa(
-        IdEmpresa,
+        empresa.id,
         linkedin,
         whatsapp,
         email,
         instagram,
       );
-      alert('Links atualizados com sucesso!');
+
+      // Redirecionar para a página /adm/${IdEmpresa}
+      router.push(`/adm/${IdEmpresa}`);
     } catch (error) {
       alert('Erro ao atualizar os links.');
     }

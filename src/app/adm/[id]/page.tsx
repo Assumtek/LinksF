@@ -24,7 +24,7 @@ export default function EditEmpresa() {
       try {
         const empresa = await handleEmpresa(IdEmpresa);
         setEmpresa(empresa.empresa);
-        console.log(empresa.empresa);
+        console.log("Dados da empresa:",empresa.empresa);
       } catch (error) {
         console.error("Erro ao carregar o empresa:", error);
       } finally {
@@ -90,7 +90,7 @@ export default function EditEmpresa() {
                 <Image src={links.icon_url} alt="Email" width={100} height={100} />
               </a>
               <div className={styles.cardActions}>
-              <button onClick={() => handleDeleteCard(links.id)}>Deletar card</button>
+              <button className={styles.btnDelete} onClick={() => handleDeleteCard(links.id)}>Deletar card</button>
               </div>
             </div>
           ))}

@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <div>
             <Image src="/mail.svg" alt="Email" width={40} height={40} />
-            <a href={empresa.email} target="_blank">
+            <a href={`mailto:${empresa.email}`} target="_blank">
               Email
             </a>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
                 <h2>{link.title}</h2>
                 <p>{link.description}</p>
               </div>
-              <Image src={link.icon_url} alt="Link Image" width={100} height={100} />
+              <Image src={link.icon_url} alt="Link Image" width={110} height={110} />
             </a>
           ))}
         </div>

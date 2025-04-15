@@ -7,7 +7,7 @@ import { cookies, headers } from "next/headers";
 export async function handleEmpresa(IdEmpresa:string) {
   try {
     const response = await axios.post("https://linksb-production.up.railway.app/empresa", {
-      id: IdEmpresa
+      name: IdEmpresa
     });
 
     const empresa = response.data
