@@ -57,7 +57,7 @@ export default function FormCard() {
     formData.append("icon", imagem); // Aqui vai a imagem real
 
     try {
-      const response = await fetch("https://linksb-production-1e74.up.railway.app//links", {
+      const response = await fetch("https://linksb-production-1e74.up.railway.app/links", {
         method: "POST",
         body: formData,
       });

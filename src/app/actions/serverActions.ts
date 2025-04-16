@@ -6,7 +6,7 @@ import { cookies, headers } from "next/headers";
 
 export async function handleEmpresa(IdEmpresa:string) {
   try {
-    const response = await axios.post("https://linksb-production-1e74.up.railway.app//empresa", {
+    const response = await axios.post("https://linksb-production-1e74.up.railway.app/empresa", {
       name: IdEmpresa
     });
 
@@ -24,7 +24,7 @@ export async function handleEmpresa(IdEmpresa:string) {
 
 export async function handleEditDescriptionEmpresa(id: string, description: string) {
   try {
-    const response = await axios.post("https://linksb-production-1e74.up.railway.app//editcompany", {
+    const response = await axios.post("https://linksb-production-1e74.up.railway.app/editcompany", {
       id: id,
       description: description,
     });
@@ -41,7 +41,7 @@ export async function handleEditDescriptionEmpresa(id: string, description: stri
 
 export async function handleDeleteLink(IdEmpresa: string) {
   try {
-    const response = await axios.post("https://linksb-production-1e74.up.railway.app//linksdelete", {
+    const response = await axios.post("https://linksb-production-1e74.up.railway.app/linksdelete", {
       linkId: IdEmpresa,
     });
 
@@ -57,7 +57,7 @@ export async function handleDeleteLink(IdEmpresa: string) {
 
 export async function handleCreatLink(IdEmpresa: string, title: string, logo: string, description: string, url: string, order: number) {
   try {
-    const response = await axios.post("https://linksb-production-1e74.up.railway.app//links", {
+    const response = await axios.post("https://linksb-production-1e74.up.railway.app/links", {
       companyId: IdEmpresa,
       title: title,
       logo: logo,
@@ -79,7 +79,7 @@ export async function handleCreatLink(IdEmpresa: string, title: string, logo: st
 
 export async function handleEditLinksEmpresa(id: string,instagram: string, linkedin: string, whatsapp: string, email: string) {
   try {
-    const response = await axios.post("https://linksb-production-1e74.up.railway.app//editcompany", {
+    const response = await axios.post("https://linksb-production-1e74.up.railway.app/editcompany", {
       id: id,
       instagram,
       linkedin,
