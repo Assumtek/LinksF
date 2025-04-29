@@ -1,0 +1,160 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/page.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+
+.page_divisor__PgnkH{
+    width: 100%;
+    height: 1px;
+    margin-top: 60px;
+
+    background-color: #00000059;
+}
+
+.page_bio__fqC7V{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 70px 0px 40px 0px;
+}
+
+.page_bio__fqC7V img{
+    width: 91px;
+    height: 91px;
+    border-radius: 5px;
+}
+
+.page_bio__fqC7V h1{
+    font-size: 35px;
+}
+
+.page_bio__fqC7V p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page_biolinks__a99HE{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page_bioDescption___Wy0u{
+    font-size: 17px;
+    margin-bottom: 40px;
+    color: #484848;
+}
+
+.page_biolinks__a99HE{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.page_biolinks__a99HE div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 17px;
+}
+
+.page_biolinks__a99HE div img{
+    width: 20px;
+}
+
+.page_biolinks__a99HE div{
+    display: flex;
+    align-items: start;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 19px;
+
+    height: 55px;
+
+    border: solid 1.3px #0000004d;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.page_biolinks__a99HE div:hover{
+    background-color: #00000017;
+    animation: 4s;
+}
+
+.page_cards__Ff9Bq{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.page_card__QV0Om{
+    display: flex;
+    padding: 30px 30px;
+    border: solid 1.3px #0000004d;
+    border-radius: 5px;
+    height: 160px;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.page_card__QV0Om:hover{
+    background-color: #00000017;
+    animation: 4s;
+}
+
+.page_card__QV0Om img{
+    width: 110px;
+}
+
+.page_carttext__fCtTO h2{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.page_carttext__fCtTO p{
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #0000009d;
+}
+
+.page_forward__BicPj{
+    background-color: #073385;
+    color: #FFFF;
+}
+
+.page_forward__BicPj p{
+    color: #ffffff8e;
+}
+
+.page_forward__BicPj:hover{
+    background-color: #0b52d4;
+    animation: 4s;
+}
+
+@media (max-width: 665px){
+    
+
+    .page_card__QV0Om{
+        height: 100%;
+        align-items: center;
+    }
+
+    .page_card__QV0Om img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .page_carttext__fCtTO h2{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    
+    .page_carttext__fCtTO p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
